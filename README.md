@@ -4,18 +4,21 @@ spam-phone-reporter is a simple command line to submit and report unhealth and s
 
 ## How to Build
 
-0) prerequirement
+### 0) prerequirement
+
 this is a node CLI project, so we need install nodejs in system, and make sure `node` and `npm` commands avaliable. And project written with `typescript` language, so we need install `typescript` globally
 ```
 npm i typescript -g
 ```
-1) prepare dependencies
+### 1) prepare dependencies
+
 go to root of dir.
 ```
 npm i
 ```
 
-2) build
+### 2) build
+
 ```
 tsc
 ```
