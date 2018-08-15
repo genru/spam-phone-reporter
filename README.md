@@ -2,6 +2,7 @@
 
 spam-phone-reporter is a simple command line to submit and report unhealth and spam call number via [12321.cn](https://12321.cn/)(网络不良与垃圾信息举报受理中心).
 
+![screenshot](https://raw.githubusercontent.com/genru/spam-phone-reporter/master/screenshot.png)
 ## How to Build
 
 ### 0) prerequirement
