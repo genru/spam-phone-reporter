@@ -5,20 +5,20 @@ spam-phone-reporter is a simple command line to submit and report unhealth and s
 ![screenshot](https://raw.githubusercontent.com/genru/spam-phone-reporter/master/screenshot.png)
 ## How to Build
 
-### 0) prerequirement
+### 0) Prerequirements
 
 this is a node CLI project, so we need install nodejs in system, and make sure `node` and `npm` commands avaliable. And project written with `typescript` language, so we need install `typescript` globally
 ```
 npm i typescript -g
 ```
-### 1) prepare dependencies
+### 1) Install dependencies
 
 go to root of dir.
 ```
 npm i
 ```
 
-### 2) build
+### 2) Build ts
 
 ```
 tsc
@@ -41,4 +41,4 @@ then you just need follow the instruction step by step until report complete. *E
 Please [fire a bug report](https://github.com/genru/spam-phone-reporter/issues/new) if you meet any problem.
 
 ## About Publish
-I dont think this simple tool is useful for all users in this world(this is a special and narrow usage tool for China mainland people), actually it's more like personal tool. it's not worth to upload and publish to npm repo. So let's keep it personal.
+I dont think this simple tool is useful for all users in this world(this is a special and narrow usage tool for China mainland people), actually it's more like a personal tool. it does not worth to upload and publish to npm repo. So let's keep it personal.
