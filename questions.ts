@@ -1,3 +1,8 @@
+import * as Configstore from 'configstore';
+const app = require('./package.json');
+
+export const config = new Configstore(app.name);
+
 export const questions = [
     {
         type: 'list',
@@ -33,13 +38,25 @@ export const questions = [
     {
         type: 'input',
         name: 'phone',
-        message: "Which number reveived call?",
-        default: "13813986361",
+        message: "Which number reveived spam call?",
+        default: (param: any) => {
+            return config.get('def_received_phone')
+        },
         validate: (input: string) => {
             if(/^\d{5,11}$/gm.test(input)) {
                 return true;
             }
             return 'invalid phone numer (5-11 digit number)'
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'save_default_phone',
+        when: (param: any) => {
+            return config.get('def_received_phone') !== param.phone;
+        },
+        message: (param: any) => {
+            return `Should save ${param.phone} as default phone for next use?`
         }
     },
     {

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import "./polyfill";
 import * as inquirer from "inquirer";
-import { questions } from "./questions";
+import { questions, config } from "./questions";
 import axios  from "axios";
 import chalk from 'chalk'
 import * as ora from 'ora'
@@ -19,6 +19,11 @@ figlet('Stop Spam', (err, data) => {
         const datetime = `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}`
         // console.log(datetime)
         answer.called_time = datetime
+
+        if (answer.save_default_phone) {
+            config.set('def_received_phone', answer.phone);
+        }
+
         try {
             const form = new URLSearchParams();
             form.set('code', 'ewsh');
