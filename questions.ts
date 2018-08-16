@@ -27,7 +27,7 @@ export const questions = [
     {
         type: 'input',
         name: 'sms_phone',
-        message: "Which number called you? (number only)",
+        message: "Which number called you (spammer number)?",
         validate: (input: string) => {
             if(/^\d{5,11}$/gm.test(input)) {
                 return true;
@@ -38,7 +38,7 @@ export const questions = [
     {
         type: 'input',
         name: 'phone',
-        message: "Which number reveived spam call?",
+        message: "Which number reveived spam call (your number)?",
         default: (param: any) => {
             return config.get('def_received_phone')
         },
