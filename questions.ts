@@ -62,7 +62,7 @@ export const questions = [
     {
         type: 'input',
         name: 'sms_content',
-        message: "Descript content of call?",
+        message: "Describe content of call?",
         default: (param: any) => {
             const desc = ['','未经允许的淫秽色情电话',
             '未经允许的发票办证电话',
