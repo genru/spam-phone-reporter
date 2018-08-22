@@ -7,7 +7,7 @@ export const questions = [
     {
         type: 'list',
         name: 'bad_type',
-        message: 'Which sort of call you had received?',
+        message: 'Which sort of call content you had received?',
         choices: [{name: '1-淫秽色情', value: 1},
             {name: '2-发票办证', value: 2},
             {name: '3-反动谣言', value: 3},
@@ -58,6 +58,15 @@ export const questions = [
         message: (param: any) => {
             return `Should save ${param.phone} as default phone for next use?`
         }
+    },
+    {
+        type: 'list',
+        name: 'type',
+        message: 'Which type of call you recieved',
+        choices: [{name: '1-响一声挂断', value: 0},
+            {name: '2-自动语音骚扰', value: 1},
+            {name: '3-人工骚扰', value: 2}
+        ]
     },
     {
         type: 'input',

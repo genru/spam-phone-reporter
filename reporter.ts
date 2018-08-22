@@ -10,14 +10,12 @@ import * as figlet from "figlet";
 inquirer.registerPrompt('datetime', require('inquirer-datepicker-prompt'))
 
 figlet('Stop Spam', (err, data) => {
-    // const text: string = data;
+
     console.info(chalk.cyan(data as string))
     inquirer.prompt(questions).then((answer: any) => {
-        // console.info(answer)
 
         const d = new Date(answer.called_time);
         const datetime = `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}`
-        // console.log(datetime)
         answer.called_time = datetime
 
         if (answer.save_default_phone) {
@@ -27,7 +25,7 @@ figlet('Stop Spam', (err, data) => {
         try {
             const form = new URLSearchParams();
             form.set('code', 'ewsh');
-            form.set('type', '2');
+            form.set('type', answer.type);
             form.set('bad_type', answer.bad_type);
             form.set('phone', answer.phone);
             form.set('sms_phone', answer.sms_phone);
@@ -37,7 +35,7 @@ figlet('Stop Spam', (err, data) => {
             const url = 'https://12321.cn/Com-update?strName=jb_tel';
             (async () => {
                 try {
-                    const spinner = ora('Adding contact ...').start();
+                    const spinner = ora('processing ...').start();
                     const response = await axios.post(`${url}`,form)
                     console.info(response.status);
                     spinner.stop()
