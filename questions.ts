@@ -29,7 +29,7 @@ export const questions = [
         name: 'sms_phone',
         message: "Which number called you (spammer number)?",
         validate: (input: string) => {
-            if(/^\d{5,11}$/gm.test(input)) {
+            if(/^\d{5,13}$/gm.test(input)) {
                 return true;
             }
             return 'invalid phone numer (5-11 digit number)'
@@ -93,7 +93,7 @@ export const questions = [
     {
         type: 'datetime',
         name: 'called_time',
-        message: "Descript content of call? (yyyy-mm-dd HH:MM)",
+        message: "What's the time and date you get the call? (yyyy-mm-dd HH:MM)",
         format: ['yyyy','-', 'mm', '-', 'dd', ' ', 'HH', ':', 'MM'],
         initial: new Date()
     }
