@@ -405,8 +405,8 @@ figures@^3.0.0:
     escape-string-regexp "^1.0.5"
 
 follow-redirects@^1.14.8:
-  version "1.14.9"
-  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.9.tgz"
+  version "1.15.4"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.4.tgz#cdc7d308bf6493126b17ea2191ea0ccf3e535adf"
 
 graceful-fs@^4.2.6:
   version "4.2.11"
